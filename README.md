@@ -5,10 +5,11 @@ This Flask web application provides audio transcription using WhisperX and AI-po
 ## Features
 
 - **Audio Transcription**: Convert audio files to text using WhisperX models
-- **Model Selection**: Choose from different WhisperX models
+- **Model Selection**: Choose from different WhisperX models (large-v2 recommended)
 - **AI Summarization**: Generate structured summaries using language models
 - **PDF Export**: Download summaries as formatted PDF documents
 - **Support for Multiple Audio Formats**: Supports .mp3, .wav, .ogg, .m4a, .flac
+
 
 ## Installation and Setup
 
@@ -22,18 +23,24 @@ This Flask web application provides audio transcription using WhisperX and AI-po
 1. Open **Anaconda Prompt** (or **Miniconda Prompt**) from the Start menu
    - On Windows: Search for "Anaconda Prompt" or "Miniconda Prompt"
    - On Mac/Linux: Open Terminal
-2. Navigate to your Desktop (Or where you want to have the project):
+2. Navigate to your Desktop (or where you want to have the project):
 
 3. Download the project:
+```bash
 git clone https://github.com/naderjawary/meeting-summarization-webapp.git
-
+```
 4. Navigate to the project:
+```bash
 cd meeting-summarization-webapp/backend
-
+```
 
 ### Step 3: Setup the Environment
 **Make sure you're still in the Anaconda/Miniconda Prompt!**
 Type these commands one by one:
+
+```bash
+# Go back to main project folder
+cd ..
 
 # Create Python environment
 conda create -n whisperx python=3.10 -y
@@ -53,20 +60,25 @@ pip install -r requirements.txt
 
 ### Step 4: Run the Application
 **Keep using the same Anaconda/Miniconda Prompt where (whisperx) appears:**
+```bash
 # Make sure you're in backend folder and see (whisperx) in your prompt
 python app.py
+```
 
-First time running each WhisperX model, will take some time to download the model.
+You should see:
+```
+* Running on http://127.0.0.1:5000
+* Debug mode: on
+```
 
 ### Step 5: Use the Application
 1. Open your web browser
 2. Go to: **http://localhost:5000**
 3. Upload an audio file (.mp3, .wav, etc.)
-4. Click "Transcribe"
+4. Click "Upload and Transcribe"
 5. Wait for transcription (first time takes longer - downloads AI models)
 6. Click "Generate Summary" 
 7. Download PDF if needed
-
 
 ## Quick Start Summary
 
