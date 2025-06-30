@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Transcript Confirmation</title>
+</head>
+<body>
+    <h2>Transcript</h2>
+    <form action="{{ url_for('summarize') }}" method="POST">
+        <textarea name="transcript" rows="30" cols="100">{{ transcript }}</textarea><br><br>
+        <input type="submit" value="Confirm and Summarize">
+    </form>
+</body>
+</html>

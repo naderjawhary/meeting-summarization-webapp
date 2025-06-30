@@ -1,0 +1,14 @@
+Flask==3.1.0
+whisperx==3.3.4
+faster-whisper==1.1.1
+torch==2.7.0+cu118
+torchaudio==2.7.0+cu118
+torchvision==0.22.0+cu118
+openai==1.77.0
+reportlab==4.4.0
+pydub==0.25.1
+soundfile==0.13.1
+requests==2.32.3
+numpy==2.1.2
+transformers==4.51.3
+huggingface-hub==0.30.2

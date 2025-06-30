@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rename Speakers</title>
+</head>
+<body>
+    <h1>Rename Speakers</h1>
+    <form method="POST">
+        {% for speaker in speaker_labels %}
+            <label for="speaker_{{ loop.index }}">Rename {{ speaker }}:</label>
+            <input type="text" name="speaker_map[{{ speaker }}]" placeholder="Enter new name for {{ speaker }}"><br><br>
+        {% endfor %}
+        <input type="hidden" name="transcript_with_speakers" value="{{ transcript_with_speakers }}">
+        <button type="submit">Apply Names</button>
+    </form>
+</body>
+</html>
