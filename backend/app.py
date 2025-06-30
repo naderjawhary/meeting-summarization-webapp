@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, send_file
 import os
 import whisperx
 import time
+import torch
 from openai import OpenAI
 import re
 from io import BytesIO
@@ -18,7 +19,7 @@ os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 app.config["UPLOAD_FOLDER"] = UPLOAD_FOLDER
 
 # Configuration for WhisperX
-device = "cuda"
+device = "cuda" if torch.cuda.is_available() else "cpu"
 compute_type = "int8"
 # Load default WhisperX model (will be overridden per user selection)
 model = whisperx.load_model("large-v2", device, compute_type=compute_type)
